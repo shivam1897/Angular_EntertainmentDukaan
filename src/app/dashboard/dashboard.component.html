@@ -1,0 +1,22 @@
+<div class="navbar">
+    <a *ngIf="!isLoggedIn" routerLink="/login">Login</a>
+  <div class="options" *ngIf="isLoggedIn">
+    <a routerLink="/logout">Logout</a>
+    <a routerLink="/favourites">Favourites</a>
+    <a routerLink="/watched">Watched</a>
+    <a *ngIf="isAdmin" routerLink="/admin">Admin</a>
+  </div>
+  
+</div>
+
+<h2>Top Movies</h2>
+
+<div class="movies-menu">
+  <a *ngFor="let movie of movies"
+    routerLink="/detail/{{movie.id}}">
+    {{movie.name}}
+    <br>
+    IMDB: {{movie.rating}}
+  </a>
+</div>
+
