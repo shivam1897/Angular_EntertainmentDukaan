@@ -1,0 +1,8 @@
+
+
+<div class="favourite-movie">
+    <label>{{user?.name}}, movies you have already watched</label>
+    <ul *ngFor="let fav of user?.favourites">
+        <li>{{fav}}</li>
+    </ul>
+  </div>

@@ -1,0 +1,7 @@
+<ul class="movies">
+    <li *ngFor="let movie of Movies">
+      <a routerLink="/detail/{{movie.id}}">
+        <span class="badge">{{movie.id}}</span> {{movie.name}}/IMDB:{{movie.rating}}
+      </a>
+    </li>
+  </ul>

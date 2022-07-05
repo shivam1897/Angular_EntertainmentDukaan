@@ -1,0 +1,53 @@
+<div class = "movie-details"*ngIf="movie">
+    <h2>{{movie.name | uppercase}}</h2>
+    <div><span>id: </span>{{movie.id}}</div>
+    <div>
+      <label for="Name">Movie name: {{movie.name}}</label>
+      <br>
+      <label for="Rating">IMDB Rating: {{movie.rating}}</label>
+    </div>
+    <div class = "review" *ngIf="movie.reviews">
+      <h3>Reviews by users:</h3>
+      <ul *ngFor="let review of movie.reviews">
+        <li>{{review}}</li>
+      </ul>
+    </div>
+</div>
+
+<div *ngIf="isLoggedIn">
+  <label id="example-radio-group-label">Have you watched this movie ?</label>
+  <mat-radio-group
+    aria-labelledby="example-radio-group-label"
+    class="example-radio-group"
+    [(ngModel)]="isWatchedByUser"
+    (ngModelChange)="AddMovieToUserWatchList()">
+
+    <mat-radio-button class="example-radio-button" [value]="true">Yes</mat-radio-button>
+    <mat-radio-button class="example-radio-button" [value]="false">No</mat-radio-button>
+  </mat-radio-group>
+
+  <div>Your favorite season is: {{isWatchedByUser}}</div>
+  <div *ngIf="isWatchedByUser">
+    <form [formGroup]="formData" (ngSubmit)="onClickSubmit(formData.value)" 
+    class="form-signin">
+    <h2 class="form-signin-heading">Please provide your review</h2>
+    <input type="text" id="review" class="form-control" formControlName="review" required minlength="4">
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+    </form>
+
+  <label id="example-radio-group-label">Is this your fav movie ?</label>
+  <mat-radio-group
+    aria-labelledby="example-radio-group-label"
+    class="example-radio-group"
+    [(ngModel)]="isFavourite"
+    (ngModelChange)="AddMovieToFavourite()">
+
+    <mat-radio-button class="example-radio-button" [value]="true">Yes</mat-radio-button>
+    <mat-radio-button class="example-radio-button" [value]="false">No</mat-radio-button>
+  </mat-radio-group>
+  </div>
+  
+<!-- Seperate button to go back to previous page -->
+<div>
+    <button type="button" (click)="goBack()">go back</button>
+</div>

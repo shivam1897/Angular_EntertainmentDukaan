@@ -1,0 +1,82 @@
+.form-signin {
+    max-width: 330px;
+ 
+    padding: 15px;
+    margin: 0 auto;
+ }
+ 
+ input {
+    margin-bottom: 20px;
+ }
+
+ /* DashboardComponent's private CSS styles */
+
+h2{
+   font-size: 2pc;
+   font-family: cursive;
+   color: #cfd8dc;
+   text-align: center;
+   background-color: #0e0f0f;
+ }
+ 
+h3{
+   font-size: 1.5pc;
+   font-family: cursive;
+   color: #cfd8dc;
+   text-align: center;
+   background-color: #0e0f0f;
+ }
+
+ label{
+   font-size: 1pc;
+   font-family: cursive;
+   color: #262727;
+   text-align: left;
+   background-color: #d9e1e1;
+   padding-left: 2%;
+   padding-right: 2% ;
+ }
+ li{
+   color: #262727;
+   font-family: cursive;
+   font-size: 1pc;
+   text-align: left;
+   background-color: #d9e1e1;
+ }
+ 
+ span{
+   font-size: 1.2pc;
+   font-family: cursive;
+   color: #262727;
+   text-align: left;
+   background-color: #d9e1e1;
+ }
+ 
+ 
+ label {
+   color: #435960;
+   font-weight: bold;
+   font-family: cursive;
+ }
+
+.navbar{
+ align-items: right;
+}
+ 
+input{
+   color: #435960;
+   font-weight: bold;
+   font-family: cursive;
+}
+ 
+ 
+ @media (min-width: 600px) {
+   a {
+     width: 18%;
+     box-sizing: content-box;
+   }
+ }
+ 
+ a:hover {
+   background-color: rgb(197, 71, 71);
+ }
