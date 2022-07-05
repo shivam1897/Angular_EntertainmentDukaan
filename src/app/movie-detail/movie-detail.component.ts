@@ -57,7 +57,9 @@ export class MovieDetailComponent implements OnInit {
   }
   getHero(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
+    
     this.movie =this.movieService.getMoview(id);
+    console.log(`Got movie returned as : ${this.movie.name} for id ${id}`)
   }
 
   goBack(): void {

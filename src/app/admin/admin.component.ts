@@ -28,7 +28,7 @@ export class AdminComponent implements OnInit {
   
     onClickSubmit(data: any) {
       let movie : Movie = {
-        id : this.movieService.getListOfMovies().length,
+        id : this.movieService.getListOfMovies().length + 1,
         language : data.language,
         name : data.name,
         rating : data.rating,
@@ -36,6 +36,7 @@ export class AdminComponent implements OnInit {
       }
 
       this.movieService.addMovieToList(movie)
+      this.router.navigate(['/dashboard']);
     };
     
 
