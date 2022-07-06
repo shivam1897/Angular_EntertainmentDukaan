@@ -1,27 +1,21 @@
-# AngularEntertainmentDukaan
+Angular Assignment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
+GitHubLink: https://github.com/shivam1897/Angular_EntertainmentDukaan/tree/master
+Deployed at: https://nagp-angular-assignment-2022.web.app/
 
-## Development server
+Admin user(Auto filled by default):
+Username: Shivam
+Password: Dummy
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Prime user: 
+Username: Ashutosh
+Password: Dummy
 
-## Code scaffolding
+Non-prime common user:
+Username: Piyush
+Password: Dummy
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Note:
+# Application is hosted on firebase.
+# Bonus points are not attempted.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
