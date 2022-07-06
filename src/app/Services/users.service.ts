@@ -19,11 +19,13 @@ export class UsersService {
 
   addMovieToWatched(user : User, movie : string) : void {
     let updateItem = Users.find(x => x.id == user.id);
-
+    console.log(`Adding to watched list for ${updateItem?.name}`)
     if(updateItem != undefined){
       let index = Users.indexOf(updateItem);
       updateItem.moviesWatched.push(movie);
+      console.log(`watch list ${updateItem.moviesWatched}`)
       Users[index] = updateItem;
+      console.log(`watch list ${Users[index].moviesWatched}`)
     }
   }
 

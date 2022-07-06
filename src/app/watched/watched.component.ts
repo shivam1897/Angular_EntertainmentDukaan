@@ -11,17 +11,14 @@ import { UsersService } from '../Services/users.service';
 })
 export class WatchedComponent implements OnInit {
 
-  movies : Movie[]
   user : User | undefined
-  constructor(private movieService : MoviesService, private userService : UsersService) {
+  constructor( private userService : UsersService) {
 
    }
 
+
   ngOnInit(): void {
-    this.movies = this.movieService.getListOfMovies();
     let id = Number(localStorage.getItem('LoggedInUser'))
     this.user = this.userService.getUserDetails(id);
   }
-  
-
 }

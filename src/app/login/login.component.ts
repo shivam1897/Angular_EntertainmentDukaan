@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     });
  }
 
- onClickSubmit(data: any) {
+ onClickSubmit(data: any) : boolean{
     this.userName = data.userName;
     this.password = data.password;
 
@@ -33,8 +33,10 @@ export class LoginComponent implements OnInit {
     console.log("Is Login Success: " + result); 
     if(!result){
       alert("No credentials found against this user.");
+      return false;
     }
     if(result) this.router.navigate(['/dashboard']); 
+    return true;
   };
 }
 

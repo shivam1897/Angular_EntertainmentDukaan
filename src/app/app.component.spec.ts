@@ -23,13 +23,14 @@ describe('AppComponent', () => {
   it(`should have as title 'angular-entertainment-dukaan'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-entertainment-dukaan');
+    expect(app.title).toEqual('EntertainmentDukaan');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-entertainment-dukaan app is running!');
+
+    expect(compiled.querySelector('a')?.textContent).toContain('EntertainmentDukaan');
   });
 });

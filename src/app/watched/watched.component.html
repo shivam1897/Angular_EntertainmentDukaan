@@ -2,7 +2,7 @@
 
 <div class="favourite-movie">
     <label>{{user?.name}}, movies you have already watched</label>
-    <ul *ngFor="let fav of user?.favourites">
+    <ul *ngFor="let fav of user?.moviesWatched">
         <li>{{fav}}</li>
     </ul>
   </div>
